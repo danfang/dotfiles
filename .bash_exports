@@ -1,0 +1,5 @@
+export EDITOR=vim
+
+# Setting PATH for Python 3.4
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
