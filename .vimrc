@@ -31,7 +31,14 @@ set softtabstop=4
 "  STATUS & INFO
 " ----------------
 set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}
+set statusline+=%F
+set statusline+=%m%r
+set statusline+=\ \ \ Line:\ %l/%L
+set statusline+=\ \ Col:\ %c
+set statusline+=%=
+set statusline+=[%{strlen(&fenc)?&fenc:&enc}
+set statusline+=\ %{&fileformat}] 
 set number
 set showcmd		    " Show (partial) command in status line.
 
