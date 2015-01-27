@@ -1,3 +1,35 @@
 [user]
     email = danfang@uw.edu
     name = Daniel Fang
+
+[alias]
+    st = status
+    co = checkout
+    ci = commit -am
+    rb = rebase
+    br = branch -av
+    pl = pull
+    pu = push
+    ad = add
+    mt = mergetool
+    df = diff
+    lg = log --graph --oneline
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
