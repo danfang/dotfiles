@@ -10,7 +10,7 @@
     br = branch -av
     pl = pull
     pu = push
-    ad = add
+    ad = add -A
     mt = mergetool
     df = diff
     lg = log --graph --oneline
