@@ -1,8 +1,3 @@
-# -------------
-#  Mac Only
-# -------------
-alias gd='cd ~/Google\ Drive/'
-
 # -----------
 #    UNIX
 # ----------
@@ -12,8 +7,8 @@ alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias ..='cd ../'
 alias ...='cd ../../'
-alias .3='cd ../../../'
-alias .4='cd ../../../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 alias ll='ls -lhA'
 alias attu='ssh danfang@attu.cs.washington.edu'
 

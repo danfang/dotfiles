@@ -21,7 +21,11 @@ apt-get -y upgrade
 apt-get install -y nginx default-jdk postgresql-9.4 postgresql-client-9.4 postgresql-contrib-9.4 python-pip python-dev tmux htop unzip libpq-dev nodejs npm
 
 # Install python tools
-pip install psycopg2 sqlalchemy virtualenv requests joe
+pip install psycopg2 sqlalchemy virtualenv requests joe gunicorn
 
 # Install node tools
-npm install -g grunt grunt-cli
+npm install -g grunt grunt-cli forever
+
+# user
+useradd dfang
+usermod -g admin dfang
