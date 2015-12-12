@@ -1,4 +1,4 @@
-# dotfiles
+dotfiles
 ==
 These are my moderately opinionated dotfiles and bootstrapping tools.
 
