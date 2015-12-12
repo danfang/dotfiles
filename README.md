@@ -13,7 +13,7 @@ These are my moderately opinionated dotfiles and bootstrapping tools.
 
 #### tmux
 - Prefix is set to \` - use \`\` to get a backtick.
-- 0 indexed windows
+- 1-indexed windows
 - `Prefix + v` and `Prefix + s` for vertical and horizontal window splitting
 - `Prefix + c` to create a new window
 - `Prefix + h/j/k/l` to navigate between windows
