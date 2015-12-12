@@ -26,6 +26,11 @@ pip install psycopg2 sqlalchemy virtualenv requests joe gunicorn
 # Install node tools
 npm install -g grunt grunt-cli forever
 
-# user
-useradd dfang
-usermod -g admin dfang
+read -p "Configuring admin user profile. Enter username: " USER
+echo "";
+
+useradd $USER
+usermod -g admin $USER
+
+mkdir -p "/home/${USER}/.ssh/"
+cat "keys/id_rsa.pub" > "/home/${USER}/.ssh/authorized_keys"
