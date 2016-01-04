@@ -38,3 +38,20 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
+# Encrypt a file using a symmetric key
+function encrypt {
+    if [ ! -f "$1" ] || [ ! "$2" ]; then
+        echo 'Usage: encrypt [infile] [outfile]'
+    else
+        openssl enc -aes-256-cbc -in "$1" -out "$2"
+    fi
+}
+
+# Decrypt a file using a symmetric key
+function decrypt {
+    if [ ! -f "$1" ] || [ ! "$2" ]; then
+        echo 'Usage: decrypt [infile] [outfile]'
+    else
+        openssl enc -d -aes-256-cbc -in "$1" -out "$2"
+    fi
+}
