@@ -38,6 +38,10 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
+# Docker commands
+alias docker-rmi='docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi'
+alias docker-rm='docker rm -v $(docker ps -a -q -f status=exited)'
+
 # Encrypt a file using a symmetric key
 function encrypt {
     if [ ! -f "$1" ] || [ ! "$2" ]; then
