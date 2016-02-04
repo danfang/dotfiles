@@ -12,10 +12,10 @@ alias .....='cd ../../../../'
 alias attu='ssh danfang@attu.cs.washington.edu'
 
 # GIT
-alias gip='git push origin master'
-alias gic='git commit -am'
-alias gil='git pull origin master'
-alias gis='git status'
+alias gitph='git push origin master'
+alias gitc='git commit -am'
+alias gitpl='git pull origin master'
+alias gits='git status'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
