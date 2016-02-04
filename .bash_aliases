@@ -11,6 +11,12 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 alias attu='ssh danfang@attu.cs.washington.edu'
 
+# GIT
+alias gip='git push origin master'
+alias gic='git commit -am'
+alias gil='git pull origin master'
+alias gis='git status'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
@@ -39,7 +45,7 @@ alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Docker commands
-alias docker-rmi='docker images --quiet --filter=dangling=true | xargs --no-run-if-empty docker rmi'
+alias docker-rmi='docker rmi $(docker images --quiet --filter "dangling=true")'
 alias docker-rm='docker rm -v $(docker ps -a -q -f status=exited)'
 
 # Encrypt a file using a symmetric key
