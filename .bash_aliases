@@ -12,7 +12,7 @@ alias .....='cd ../../../../'
 alias attu='ssh danfang@attu.cs.washington.edu'
 
 # GIT
-alias gitph='git push origin master'
+alias gitps='git push origin master'
 alias gitc='git commit -am'
 alias gitpl='git pull origin master'
 alias gits='git status'
